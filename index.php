@@ -23,9 +23,9 @@ session_start();		// permet d'utiliser des variables de session
 $debug = false;
 
 // choix des styles graphiques
-$version = "1.4.5";			// choix de la version de JQuery Mobile (voir fichier head.php) : 1.2.0,  1.2.1,  1.3.2,  1.4.5
-$themeNormal = "a";			// thème de base
-$themeProbleme = "b";		// thème utilisé pour afficher un message en cas de problème
+$version = "1.3.2";			// choix de la version de JQuery Mobile (voir fichier head.php) : 1.2.0,  1.2.1,  1.3.2,  1.4.5
+$themeNormal = "b";			// thème de base
+$themeProbleme = "c";		// thème utilisé pour afficher un message en cas de problème
 
 // on vérifie le paramètre action de l'URL
 if ( ! isset ($_GET['action']) == true)  $action = '';  else   $action = $_GET['action'];
@@ -61,7 +61,7 @@ switch($action){
 		include_once ('controleurs/CtrlMenu.php'); break;	// ligne provisoire
 	}
 	case 'ConfirmerReservation': {
-		//include_once ('controleurs/CtrlConfirmerReservation.php'); break;
+		include_once ('controleurs/CtrlConfirmerReservation.php'); break;
 		include_once ('controleurs/CtrlMenu.php'); break;	// ligne provisoire
 	}
 	case 'AnnulerReservation': {
