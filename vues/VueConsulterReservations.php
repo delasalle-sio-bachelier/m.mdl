@@ -22,12 +22,12 @@
 					<?php foreach($listeRes as $res){ ?>
 						<li>
 						<h5>Réservation n°<?php echo $res->getId()?></h5>
-						<p>Passée le <?php echo utf8_encode(date('d/M/Y H:i', $res->getTimestamp()))?></p>
+						<p>Passée le <?php echo $res->getTimestamp()?></p>
 						<p>Début : <?php echo utf8_encode(date('d/M/Y H:i', $res->getStart_time()))?></p>
 						<p>Fin : <?php echo utf8_encode(date('d/M/Y H:i', $res->getEnd_time()))?></p>
 						<p>Salle : <?php echo $res->getRoom_name()?></p>
 						<p>Etat : <?php if($res->getStatus()==4)echo "En attente"; else echo "Confirmée"?></p>
-						<h5>Digicode : <?php echo $res->getDigicode() ?></h5>
+						<h5><div style= "text-align:right;" >Digicode : <?php echo $res->getDigicode() ?></div></h5>
 						</li>
 					<?php } ?>
 				</ul>
