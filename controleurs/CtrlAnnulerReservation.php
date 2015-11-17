@@ -39,7 +39,6 @@ if ( ! isset ($_POST ["numero"]) == true) {
 						$dao->annulerReservation($numero);
 						$msgFooter = 'La réservation a été annulée.';
 						$themeFooter = $themeNormal;
-					
 					}
 				
 			}else{
