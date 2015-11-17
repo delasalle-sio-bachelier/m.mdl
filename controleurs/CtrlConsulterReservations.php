@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlConsulterReservations.php : traiter la demande de consultation de reservation
-// Ecrit le 13/10/2015 par Adrien
+// Ecrit le 17/11/2015 par Nicoo
 	$msgFooter = '';
 	$themeFooter = $themeNormal;
 	// connexion du serveur web à la base MySQL

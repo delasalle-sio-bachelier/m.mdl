@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlConsulterReservations.php : traiter la demande de consultation de reservation
-// Ecrit le 13/10/2015 par Adrien
+// Ecrit le 13/10/2015 par nICOO
 if ( ! isset ($_POST ["numero"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
 		$msgFooter = 'Annuler une réservation';
