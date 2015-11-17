@@ -19,7 +19,7 @@
 				<form name="form1" id="form1" action="index.php?action=CreerUtilisateur" method="post">
 				
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="password" name="newuser" id="newuser" placeholder="Entrer un nouvel utilisateur" value="" >
+						<input type="text" name="newuser" id="newuser" placeholder="Entrer un nouvel utilisateur" value="" >
 					</div>
 					<div data-role="fieldcontain">
 						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer un nouvel utilisateur">
