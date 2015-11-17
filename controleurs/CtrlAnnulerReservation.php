@@ -31,20 +31,17 @@ if ( ! isset ($_POST ["numero"]) == true) {
 			if($dao->estLeCreateur($_SESSION["nom"], $numero)){
 				$dao->creerLesDigicodesManquants();
 				$res = $dao->getReservation($numero);
-				if($res->getStatus() == 4){
 					if($res->getEnd_time()<time()){
-						$msgFooter = "Cette réservation est déjà annulée.";
+						$msgFooter = "Cette réservation est déjà passééé.";
 						$themeFooter = $themeProbleme;
 					}else{
 						// annule la réservation du numéro suivant donné en paramètre
 						$dao->annulerReservation($numero);
 						$msgFooter = 'La réservation a été annulée.';
 						$themeFooter = $themeNormal;
+					
 					}
-				}else{
-					$msgFooter = "Cette réservation est déjà annulée.";
-					$themeFooter = $themeProbleme;
-				}
+				
 			}else{
 				$msgFooter = "Vous n'êtes pas l'auteur de cette réservation.";
 				$themeFooter = $themeProbleme;
