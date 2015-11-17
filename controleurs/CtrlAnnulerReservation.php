@@ -23,7 +23,7 @@ if ( ! isset ($_POST ["numero"]) == true) {
 		// la méthode existeReservation de la classe DAO retourne true si $nom existe, false s'il n'existe pas
 		if ( ! $dao->existeReservation($numero) )  {
 			// si le nom n'existe pas, retour à la vue
-			$msgFooter = "Numéro réservation inexistant !";
+			$msgFooter = "Numéro de réservation inexistant !";
 			$themeFooter = $themeProbleme;
 			include_once ('vues/VueAnnulerReservation.php');
 		}
@@ -33,16 +33,16 @@ if ( ! isset ($_POST ["numero"]) == true) {
 				$res = $dao->getReservation($numero);
 				if($res->getStatus() == 4){
 					if($res->getEnd_time()<time()){
-						$msgFooter = "Cette réservation est déjà passé.";
+						$msgFooter = "Cette réservation est déjà annulée.";
 						$themeFooter = $themeProbleme;
 					}else{
 						// annule la réservation du numéro suivant donné en paramètre
-						$dao->confirmerReservation($numero);
-						$msgFooter = 'La réservation a été confirmer.';
+						$dao->annulerReservation($numero);
+						$msgFooter = 'La réservation a été annulée.';
 						$themeFooter = $themeNormal;
 					}
 				}else{
-					$msgFooter = "Cette réservation est déjà confirmer.";
+					$msgFooter = "Cette réservation est déjà annulée.";
 					$themeFooter = $themeProbleme;
 				}
 			}else{
