@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlAnnulerReservation.php : annulation d'une réservation
-// Ecrit le 12/10/2015 par Nicoo
+// Ecrit le 12/10/2015 par Jim
 	if ( ! isset ($_POST ["nom"]) == true || ! isset ($_POST ["level"]) == true || ! isset ($_POST ["mail"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
 		$msgFooter = 'Créer un utilisateur';
@@ -9,15 +9,15 @@
 		include_once ('vues/VueCreerUtilisateur.php');
 	}
 	if ( empty ($_POST ["nom"]) == true)  $nom = "";  else   $nom = $_POST ["nom"];
-	if ( empty ($_POST ["level"]) == true)  $niv = "";  else   $niv = $_POST ["level"];
+	if ( empty ($_POST ["level"]) == true)  $lvl = "";  else   $lvl = $_POST ["level"];
 	if ( empty ($_POST ["mail"]) == true)  $mail = "";  else   $mail = $_POST ["mail"];
 	
-	if ($nom == ''||$niv == ''||$mail == '') {
+	if ($nom == ''||$lvl == ''||$mail == '') {
 		// si les données sont incomplètes, réaffichage de la vue avec un message explicatif
 		$msgFooter = 'Données incomplètes !';
 		$themeFooter = $themeProbleme;
 		include_once ('vues/VueCreerUtilisateur.php');
-	}else {
+	} else {
 		// connexion du serveur web à la base MySQL
 		include_once ('modele/DAO.class.php');
 		$dao = new DAO();
@@ -26,13 +26,17 @@
 		if ( $dao->existeUtilisateur($nom))  {
 			// si le nom n'existe pas, retour à la vue
 			$msgFooter = "Utilisateur créer!";
-			$dao->enregistrerUtilisateur($nom, $niv, $dao->genererUnDigicode(), $mail);
+			$outil = new Outils();
+			$mdp = $outil->creerMdp();
+			$dao->enregistrerUtilisateur($nom, $lvl, $mdp, $mail);
+			$outil->envoyerMail($mail, "Vous êtes membre de M2L!", "Vous avez été ajouté au site avec le pseudo : ".$nom. " et avec le mot de passe : ".$mdp, "delasalle.sio.olivon.a@gmail.com");
 			include_once ('vues/VueCreerUtilisateur.php');
-		}else {
+		}
+		else {
 			// annule la réservation du numéro suivant donné en paramètre
 			$msgFooter = "Cet utilisateur éxite déjà.";
 			$themeFooter = $themeProbleme;
-			include_once ('vues/VueSupprimerUtilisateur.php');
+			include_once ('vues/VueCreerUtilisateur.php');
 				
 		}
 		unset($dao); // fermeture de la connexion à MySQL

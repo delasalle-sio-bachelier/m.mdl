@@ -1,7 +1,7 @@
 <?php
 	// Projet Réservations M2L - version web mobile
 	// Fonction de la vue VueDemanderMdp.php : visualiser la vue de demande d'envoi d'un nouveau mot de passe
-	// Ecrit le 12/10/2015 par Jim
+	// Ecrit le 12/10/2015 par Nico
 ?>
 <!doctype html>
 <html>
@@ -15,18 +15,26 @@
 				<a href="index.php?action=Menu">Retour</a>
 			</div>
 			<div data-role="content">
-				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Création d'un nouvel utilisateur</h4>
+				<h4 style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Créer un nouvel utilisateur</h4>
 				<form name="form1" id="form1" action="index.php?action=CreerUtilisateur" method="post">
-				
 					<div data-role="fieldcontain" class="ui-hide-label">
-						<input type="text" name="newuser" id="newuser" placeholder="Entrer un nouvel utilisateur" value="" >
+						<input type="text" name="nom" id="nom" placeholder="Entrer le nom" value="" >
 					</div>
+					
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<input type="number" name="level" id="level" placeholder="Entrer le niveau" value="" >
+					</div>
+					
+					<div data-role="fieldcontain" class="ui-hide-label">
+						<input type="text" name="mail" id="mail" placeholder="Entrer l'adresse email" value="" >
+					</div>
+					
 					<div data-role="fieldcontain">
-						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer un nouvel utilisateur">
+						<input type="submit" name="creerUtilisateur" id="creerUtilisateur" value="Créer un utilisateur">
 					</div>
+					
 				</form>
 			</div>
-			
 			<div data-role="footer" data-position="fixed" data-theme="<?php echo $themeFooter; ?>">
 				<h4><?php echo $msgFooter; ?></h4>
 			</div>
