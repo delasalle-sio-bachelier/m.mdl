@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlDemanderMdp.php : traiter la demande d'envoi d'un nouveau mot de passe
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
 
 if ( ! isset ($_POST ["nom"]) == true) {
 	// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur

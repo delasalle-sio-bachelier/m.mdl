@@ -7,7 +7,7 @@
 //  - l'icone de l'application
 //  - la feuille de styles et le framework JQuery Mobile (en fonction de la variable $version réglée dans index.php
 
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
 ?>
 
 		<title>M2L - Réservations</title> 

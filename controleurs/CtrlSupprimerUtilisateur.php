@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlAnnulerReservation.php : annulation d'une réservation
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
 // connexion du serveur web à la base MySQL
 include_once ('modele/DAO.class.php');
 $dao = new DAO();

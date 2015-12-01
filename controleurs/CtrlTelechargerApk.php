@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlTelechargerApk.php : traiter le téléchargement de l'application Android
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
 
 // Nom du fichier à télécharger : "M2LReservations.apk"
 // Dossier contenant ce fichier : "downloads"

@@ -1,7 +1,7 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlConnecter.php : traiter la demande de connexion d'un utilisateur
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
 
 // Ce contrôleur vérifie l'authentification de l'utilisateur
 // si l'authentification est bonne, il affiche le menu utilisateur ou administrateur (vue VueMenu.php)

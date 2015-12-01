@@ -1,6 +1,6 @@
 <?php
 // Projet Réservations M2L - version web mobile
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nico
 
 // Fonction de la page principale index.php : analyser toutes les demandes et activer le contrôleur chargé de traiter l'action demandée
 

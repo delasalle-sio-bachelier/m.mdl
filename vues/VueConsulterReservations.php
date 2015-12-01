@@ -3,7 +3,7 @@
 	// Fonction de la vue VueConsulterReservations.php : visualiser les reservations
 	// cette vue est appelée par le lien "index.php?action=Menu", sans passer par un contôleur
 	// la barre d'entête possède un lien de déconnexion permettant de retourner à la page de connexion
-	// Ecrit le 12/10/2015 par Jim
+	// Ecrit le 12/10/2015 par Nicodeo
 ?>
 <!doctype html>
 <html>

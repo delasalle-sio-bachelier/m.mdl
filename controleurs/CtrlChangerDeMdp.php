@@ -1,7 +1,8 @@
 <?php
 // Projet Réservations M2L - version web mobile
 // Fonction du contrôleur CtrlAnnulerReservation.php : annulation d'une réservation
-// Ecrit le 12/10/2015 par Jim
+// Ecrit le 12/10/2015 par Nicodeo
+
 	if ( ! isset ($_POST ["newmdp1"]) == true || ! isset ($_POST ["newmdp2"]) == true) {
 		// si les données n'ont pas été postées, c'est le premier appel du formulaire : affichage de la vue sans message d'erreur
 		$msgFooter = 'Changer de mot de passe';
